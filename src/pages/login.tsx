@@ -1,14 +1,17 @@
 import { useState } from "react";
 // import instagram from "../assets/instagram.png";
 import sideImg from "../assets/landing-2x.png";
+import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+const navigate = useNavigate();
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
     // Handle login logic here
     console.log("Email:", email, "Password:", password);
+    navigate("/home");
   };
 
   return (
@@ -61,15 +64,12 @@ const Login = () => {
           <hr className="flex-1 border-gray-300" />
         </div>
         {/* Login with Facebook */}
-        <button className="flex items-center justify-center text-gray-600 font-semibold hover:underline">
-          Don't have an account?{" "}
-          <a
-            href="#"
-            className="mx-2 text-blue-900 font-semibold hover:underline"
-          >
+        <div className="flex items-center justify-center text-gray-600 font-semibold">
+          Don’t have an account?
+          <a href="/signup" className="mx-2 text-blue-900 font-semibold hover:underline">
             Sign up
           </a>
-        </button>
+        </div>
       </div>
     </div>
   );
