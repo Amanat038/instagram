@@ -1,8 +1,4 @@
 .loginbackground {
-  background: #ed139a;
-  background: linear-gradient(
-    227deg,
-    rgba(237, 19, 154, 1) 19%,
-    rgba(255, 212, 56, 1) 96%
-  );
+  background: black;
+
 }

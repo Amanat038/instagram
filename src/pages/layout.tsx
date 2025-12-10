@@ -5,6 +5,7 @@ function Layout() {
     <>
       {/* Navbar */}
       <Nav />
+
       {/* Main content */}
       <main className="flex-1 mt-16 p-4">
         <h1 className="text-3xl font-bold text-center">

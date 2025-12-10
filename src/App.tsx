@@ -7,6 +7,7 @@ function App() {
     <>
       <div className="flex flex-col min-h-screen">
         <Routes>
+          
           <Route path="/" element={<Login />} />
           <Route path="home" element={<Layout />} />
         </Routes>
