@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 interface FormData {
   fullName: string;
@@ -18,6 +19,7 @@ const Signup: React.FC = () => {
 
   const [msg, setMsg] = useState<string>("");
   const [error, setError] = useState<string>("");
+  const navigate = useNavigate();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -31,6 +33,9 @@ const Signup: React.FC = () => {
       const res = await axios.post("http://localhost:5000/api/auth/register", formData);
       setMsg(res.data.message);
       setError("");
+      setTimeout(() => {
+        navigate("/");
+      }, 1000);
     } catch (err: any) {
       setError(err.response?.data?.message || "Something went wrong");
       setMsg("");
@@ -38,7 +43,7 @@ const Signup: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-black-1000 px-4">
       <div className="w-full max-w-md bg-white shadow-lg rounded-xl p-8">
         <h2 className="text-2xl font-bold text-center mb-6">Create Account</h2>
 
