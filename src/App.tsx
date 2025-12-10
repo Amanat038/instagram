@@ -5,9 +5,8 @@ import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen loginbackground">
         <Routes>
-          
           <Route path="/" element={<Login />} />
           <Route path="home" element={<Layout />} />
         </Routes>
