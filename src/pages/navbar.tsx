@@ -8,7 +8,7 @@ import instagram from "../assets/instagram.png";
 
 function Nav() {
   return (
-    <nav className="bg-white border-b border-pink-600 shadow-sm fixed w-full top-0 z-50">
+    <nav className="bg-black border-b border-pink-600 shadow-sm fixed w-full top-0 z-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center">
