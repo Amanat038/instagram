@@ -1,5 +1,4 @@
 import Nav from "./navbar";
-import Footer from "./footer";
 function Layout() {
   return (
     <>
