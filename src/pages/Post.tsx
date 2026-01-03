@@ -1,19 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-
-type Post = {
-  id: number;
-  image: string;
-  caption: string;
-  username: string;
-  profileImage: string;
-};
-
-type PostCardProps = {
-  image: string;
-  caption: string;
-  username: string;
-  profileImage: string;
-};
+import { posts } from "../variables/home";
 
 const PostCard = ({
   image,
@@ -113,29 +99,6 @@ const PostCard = ({
     </div>
   );
 };
-const posts: Post[] = [
-  {
-    id: 1,
-    username: "anita_23",
-    profileImage: "https://via.placeholder.com/100",
-    image: "https://via.placeholder.com/600",
-    caption: "Enjoying the little moments 🌸",
-  },
-  {
-    id: 2,
-    username: "riya_life",
-    profileImage: "https://via.placeholder.com/100",
-    image: "https://via.placeholder.com/600",
-    caption: "Weekend vibes 💖",
-  },
-  {
-    id: 3,
-    username: "neha.dev",
-    profileImage: "https://via.placeholder.com/100",
-    image: "https://via.placeholder.com/600",
-    caption: "Work hard, dream big ✨",
-  },
-];
 
 const PostSection = () => {
   return (

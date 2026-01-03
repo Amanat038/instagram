@@ -1,31 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import PostSection from "./Post";
-type SlideItem = {
-  name: string;
-  image: string;
-};
-
-const items: SlideItem[] = [
-  { name: "Anita", image: "https://via.placeholder.com/150" },
-  { name: "Riya", image: "https://via.placeholder.com/150" },
-  { name: "Pooja", image: "https://via.placeholder.com/150" },
-  { name: "Neha", image: "https://via.placeholder.com/150" },
-  { name: "Kajal", image: "https://via.placeholder.com/150" },
-  { name: "Sonia", image: "https://via.placeholder.com/150" },
-  { name: "Anita", image: "https://via.placeholder.com/150" },
-  { name: "Riya", image: "https://via.placeholder.com/150" },
-  { name: "Pooja", image: "https://via.placeholder.com/150" },
-  { name: "Neha", image: "https://via.placeholder.com/150" },
-  { name: "Kajal", image: "https://via.placeholder.com/150" },
-  { name: "Sonia", image: "https://via.placeholder.com/150" },
-  { name: "Anita", image: "https://via.placeholder.com/150" },
-  { name: "Riya", image: "https://via.placeholder.com/150" },
-  { name: "Pooja", image: "https://via.placeholder.com/150" },
-  { name: "Neha", image: "https://via.placeholder.com/150" },
-  { name: "Kajal", image: "https://via.placeholder.com/150" },
-  { name: "Sonia", image: "https://via.placeholder.com/150" },
-];
-
+import { items } from "../variables/home"; 
 const Slider = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState<number>(0);
