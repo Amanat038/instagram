@@ -1,32 +1,36 @@
-import {
-  HeartIcon,
-  HomeIcon,
-  PlusCircleIcon,
-  UserCircleIcon,
-} from "@heroicons/react/16/solid";
-import instagram from "../assets/instagram.png";
-
 function Nav() {
   return (
     <div
       id="sidebar"
       className="bg-black-900 text-white w-64 space-y-4 p-5 fixed inset-y-0 left-0 
             transform -translate-x-full md:translate-x-0 transition-transform duration-300
-            border-r-1 border-pink-500"
+            border-r-1 border-gray-800"
     >
-      <h2 className="text-2xl font-semibold mb-4">Menu</h2>
+      <h4 className="text-xl  mb-4">𝓘𝓷𝓼𝓽𝓪𝓰𝓻𝓪𝓶</h4>
 
       <a href="#" className="block py-2 px-3 hover:bg-black-700 rounded">
-        Dashboard
+        Home
+      </a>
+      <a href="#" className="block py-2 px-3 hover:bg-black-700 rounded">
+        Search
+      </a>
+      <a href="#" className="block py-2 px-3 hover:bg-black-700 rounded">
+        Explore
+      </a>
+      <a href="#" className="block py-2 px-3 hover:bg-black-700 rounded">
+        Reels
+      </a>
+      <a href="#" className="block py-2 px-3 hover:bg-black-700 rounded">
+        Messages
+      </a>
+      <a href="#" className="block py-2 px-3 hover:bg-black-700 rounded">
+        Notifications
+      </a>
+      <a href="#" className="block py-2 px-3 hover:bg-black-700 rounded">
+        Create
       </a>
       <a href="#" className="block py-2 px-3 hover:bg-black-700 rounded">
         Profile
-      </a>
-      <a href="#" className="block py-2 px-3 hover:bg-black-700 rounded">
-        Settings
-      </a>
-      <a href="#" className="block py-2 px-3 hover:bg-black-700 rounded">
-        Logout
       </a>
     </div>
 

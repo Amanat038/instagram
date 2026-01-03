@@ -21,7 +21,9 @@ const Signup: React.FC = () => {
   const [error, setError] = useState<string>("");
   const navigate = useNavigate();
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -30,7 +32,10 @@ const Signup: React.FC = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", formData);
+      const res = await axios.post(
+        "http://localhost:5000/api/auth/register",
+        formData
+      );
       setMsg(res.data.message);
       setError("");
       setTimeout(() => {
@@ -51,7 +56,6 @@ const Signup: React.FC = () => {
         {error && <p className="text-red-600 text-center mb-3">{error}</p>}
 
         <form onSubmit={handleSubmit} className="space-y-4">
-
           {/* Full Name */}
           <div>
             <label className="block font-medium mb-1">Full Name</label>
@@ -119,7 +123,6 @@ const Signup: React.FC = () => {
           >
             Sign Up
           </button>
-
         </form>
       </div>
     </div>
